@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>画像クリックPWA</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="manifest" href="manifest.json">
+  
+  <script>
+    // ブラウザがService Workerをサポートしているか確認
+    if ('serviceWorker' in navigator) {
+      // ページの読み込みが完了したらService Workerを登録
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            // 登録成功時のメッセージをコンソールに出力
+            console.log('Service Worker registered: ', registration);
+          })
+          .catch(error => {
+            // 登録失敗時のエラーメッセージをコンソールに出力
+            console.error('Service Worker registration failed: ', error);
+          });
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>画像クリックPWA</h1>
+    <img src="images/image1.jpg" alt="表示画像" id="mainImage">
+    
+    <button id="changeImageBtn">画像を変える</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
