@@ -1,6 +1,6 @@
 {
-    "name": "画像ギャラリーPWA",
-    "short_name": "画像PWA",
+    "name": "ツンしたなギャラリーPWA",
+    "short_name": "ツンしたな",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",

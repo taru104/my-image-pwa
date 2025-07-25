@@ -1,13 +1,13 @@
-const CACHE_NAME = 'image-pwa-cache-v1';
+const CACHE_NAME = 'tsunshitana-pwa-cache-v1'; // キャッシュ名をより具体的に変更しました
 const urlsToCache = [
     '/',
     '/index.html',
     '/style.css',
     '/script.js',
-    // ここにあなたが使っている全ての画像ファイルとアイコンのパスを追加します
-    '/images/image1.jpg',
-    '/images/image2.jpg',
-    '/images/image3.jpg',
+    // 新しい画像ファイルのパスを追加
+    '/images/left.jpeg',   // ★ 追加
+    '/images/front.jpeg',  // ★ 追加
+    // PWAアイコンのパスもここに含まれていることを確認
     '/images/icon-192x192.png',
     '/images/icon-512x512.png'
 ];
@@ -52,13 +52,13 @@ self.addEventListener('fetch', (event) => {
 
 // アクティベートイベント: 古いキャッシュの削除
 self.addEventListener('activate', (event) => {
-    const cacheWhitelist = [CACHE_NAME];
+    const cacheWhitelist = [CACHE_NAME]; // 新しいキャッシュ名に変更
     event.waitUntil(
         caches.keys().then((cacheNames) => {
             return Promise.all(
                 cacheNames.map((cacheName) => {
                     if (cacheWhitelist.indexOf(cacheName) === -1) {
-                        // ホワイトリストにないキャッシュを削除
+                        // ホワイトリストにない（古いバージョンの）キャッシュを削除
                         return caches.delete(cacheName);
                     }
                 })

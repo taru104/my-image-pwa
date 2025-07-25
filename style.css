@@ -1,46 +1,46 @@
-/* style.css */
-
 body {
-  margin: 0;
-  padding: 20px;
-  font-family: sans-serif;
-  background-color: #f0f0f0; /* 背景を薄いグレーに */
-  display: flex;
-  justify-content: center; /* 水平方向中央揃え */
-  align-items: center;   /* 垂直方向中央揃え */
-  min-height: 100vh;
-  box-sizing: border-box;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
 }
 
 .container {
-  background-color: #fff; /* 白い背景 */
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 影を付ける */
-  text-align: center; /* コンテナ内のテキストとインライン要素を中央揃え */
-  max-width: 500px;
-  width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 img {
-  max-width: 100%; /* 画像の最大幅を100%に */
-  height: auto;
-  display: block; /* 中央揃えのためにブロック要素に */
-  margin: 0 auto 20px; /* 上下マージンと左右自動マージンで中央化 */
-  border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    /* タッチ操作を分かりやすくするため、カーソルをポインターにする */
+    cursor: pointer;
 }
 
+/* ボタンがなくなったので、ボタンに関するCSSは不要ですが、残しておいても問題ありません */
+/*
 button {
-  background-color: #007bff; /* 青い背景色 */
-  color: white;             /* 白い文字 */
-  border: none;
-  padding: 12px 25px;
-  border-radius: 5px;       /* 角丸 */
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease; /* ホバー時の変化を滑らかに */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3; /* ホバー時に少し暗い青に */
+    background-color: #0056b3;
 }
+*/
